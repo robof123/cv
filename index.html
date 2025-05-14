@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CV - Jakub Hemmerling | Specjalista ds. Sprzedaży</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans&display=swap');
+  
+  :root {
+    --primary-color: #1b263b;
+    --secondary-color: #f39c12;
+    --accent-color: #e74c3c;
+    --background-color: #f9f9f9;
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --shadow: rgba(0,0,0,0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 2rem auto 3rem;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 12px;
+    padding: 3rem 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 25px var(--shadow);
+  }
+
+  header::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px var(--secondary-color);
+    animation: pulse 3s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 0 15px var(--secondary-color);
+    }
+    50% {
+      box-shadow: 0 0 30px var(--secondary-color);
+    }
+  }
+
+  header .photo {
+    position: relative;
+    margin: 0 auto 1rem;
+    width: 140px;
+    height: 140px;
+    border: 5px solid var(--secondary-color);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow);
+    background: url('https://cdn.discordapp.com/attachments/925826479118508092/1371996490524004382/8b_leg_016_sp382.jpg?ex=68252acd&is=6823d94d&hm=0a5de03545fc6b5c3eec7e339af54fa8645611d09d672086b5bbd14ab9a35d18&') no-repeat center/cover;
+  }
+
+  header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin: 0.3rem 0 0.1rem;
+    font-size: 2.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  header p.tagline {
+    margin: 0;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+  }
+
+  header p.contact {
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    color: #d1d8e0;
+  }
+
+  main section {
+    background: white;
+    margin-top: 2.5rem;
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: transform 0.3s ease;
+  }
+  main section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px var(--shadow);
+  }
+
+  main h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-left: 6px solid var(--secondary-color);
+    padding-left: 0.75rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .profile p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+  }
+
+  .experience-item, .education-item {
+    margin-bottom: 1.8rem;
+  }
+
+  .experience-item h3, .education-item h3 {
+    margin: 0 0 0.3rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+
+  .experience-item span, .education-item span {
+    color: #95a5a6;
+    font-size: 0.92rem;
+  }
+
+  .experience-item p, .education-item p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 0.3rem;
+  }
+
+  ul.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.75rem;
+  }
+
+  ul.skills-list li {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: default;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  ul.skills-list li:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+  }
+
+  .btn-container {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .btn-download {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 28px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.6);
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-download:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 22px rgba(192, 57, 43, 0.8);
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    letter-spacing: 0.6px;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+  }
+
+  .social-icons a {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: var(--accent-color);
+  }
+
+  @media(max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    main section {
+      padding: 1.5rem 1.8rem;
+      margin-top: 1.8rem;
+    }
+    .container {
+      margin: 1rem auto 2rem;
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container" role="main" aria-label="CV Jakub Hemmerling">
+    <header>
+      <div class="photo" aria-label="Zdjęcie Jakuba Hemmerlinga"></div>
+      <h1>Jakub Hemmerling</h1>
+      <p class="tagline">Specjalista ds. Sprzedaży & Rozwoju Biznesu</p>
+      <p class="contact">📧 jbhm04@gmail.com | 📞 +48 602 296 130 | 📍 Warszawa, Ursus, Polska</p>
+      <p class="contact">Data urodzenia: 04.12.2009</p>
+    </header>
+
+    <main>
+      <section class="profile" aria-labelledby="profile-heading">
+        <h2 id="profile-heading">Profil zawodowy</h2>
+        <p>Jestem zmotywowanym i energicznym kandydatem, gotowym do zdobycia doświadczenia w sprzedaży. Chętnie uczę się nowych umiejętności i szybko adaptuję się do nowych wyzwań. Dysponuję doskonałymi zdolnościami komunikacyjnymi, a moja determinacja i pozytywne nastawienie pozwalają mi skutecznie realizować wyznaczone cele.</p>
+        <div class="btn-container">
+        </div>
+      </section>
+
+      <section class="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Doświadczenie</h2>
+        <div class="experience-item">
+          <h3>Gotowość do nauki i rozwoju zawodowego</h3>
+          <p>Chociaż nie posiadam jeszcze formalnego doświadczenia zawodowego w sprzedaży, jestem zdeterminowany, aby rozwijać się w tej dziedzinie. Uczestniczyłem/am w licznych szkoleniach i warsztatach z zakresu komunikacji, negocjacji oraz obsługi klienta. Jestem gotowy/a do pracy w dynamicznym środowisku, gdzie mogę zastosować i poszerzać swoje umiejętności.</p>
+        </div>
+      </section>
+
+      <section class="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Edukacja</h2>
+        <div class="education-item">
+          <h3>Technikum Elektroniczne nr 1 w Warszawie im. Marcina Kasprzaka</h3>
+          <span>Obecnie uczęszczam - klasa 1</span>
+          <p>Przygotowanie do kariery zawodowej w branży elektronicznej i technicznej, rozwijanie umiejętności technicznych i praktycznych.</p>
+        </div>
+      </section>
+
+      <section class="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Umiejętności</h2>
+        <ul class="skills-list" role="list">
+          <li>Komunikacja interpersonalna</li>
+          <li>Negocjacje handlowe</li>
+          <li>Budowanie relacji z klientem</li>
+          <li>Motywacja i determinacja</li>
+          <li>Obsługa klienta</li>
+          <li>CRM (podstawy)</li>
+          <li>Umiejętności analityczne</li>
+          <li>Praca zespołowa</li>
+          <li>Chęć szybkiego uczenia się</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-icons" aria-label="Linki do profili społecznościowych">
+
+      </div>
+      <p>© 2025 Jakub Hemmerling — CV stworzone z pasją i profesjonalizmem</p>
+    </footer>
+  </div>
+</body>
+</html>
+
